@@ -24,14 +24,59 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
+  TabController? tabController;
+
+  TabBar get _tabBar => TabBar(
+    indicatorColor: Colors.black,
+    labelColor: Colors.black,
+    unselectedLabelColor: Colors.grey[400],
+    controller: tabController,
+    tabs: [
+      const Tab(
+        icon: Icon(Icons.home),
+      ),
+      const Tab(
+        icon: Icon(Icons.shopping_bag),
+      ),
+      const Tab(
+        icon: Icon(Icons.credit_card_outlined),
+      ),
+      const Tab(
+        icon: Icon(
+          Icons.settings,
+        ),
+      ),
+    ],
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    tabController!.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.yellow,
+        bottom: PreferredSize(
+          preferredSize: _tabBar.preferredSize,
+          child: Material(
+            color: Colors.white, //<-- SEE HERE
+            child: _tabBar,
+          ),
+        ),
         elevation: 0.0, // 양각 제거 (그림자)
-        toolbarHeight:50.0, // 앱 바 높이 설정
-        backgroundColor: Colors.yellow[600], // 앱 바 색상
+        toolbarHeight: 50.0, // 앱 바 높이 설정
         title: const Text(
           '홈',
           style: TextStyle(
@@ -43,7 +88,9 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: <Widget>[
           IconButton(
             icon: const Padding(
-              padding: EdgeInsets.only(left:10.0,),
+              padding: EdgeInsets.only(
+                left: 10.0,
+              ),
               child: Icon(
                 Icons.notifications,
                 color: Colors.black,
@@ -54,8 +101,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           IconButton(
             icon: const Icon(
-                Icons.screen_lock_portrait,
-                color: Colors.black,
+              Icons.screen_lock_portrait,
+              color: Colors.black,
               size: 30.0,
             ),
             onPressed: () {}, // 잠금 화면으로 이동
