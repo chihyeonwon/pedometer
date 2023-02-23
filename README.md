@@ -51,3 +51,9 @@ Widget 4개를 생성하였습니다. 각 탭은 메인, 쇼핑, 쿠폰, 설정 
 ![image](https://user-images.githubusercontent.com/58906858/220835138-ea99ab3c-322d-4082-94a8-78421d39d661.png)
 ![image](https://user-images.githubusercontent.com/58906858/220835149-11d53786-9380-4b60-ba86-18e8caa83ba4.png)
 
+## MainScreen Top 위젯 구현
+```
+MainScreen을 Top, Middle, Bottom 위젯으로 크게 나누고 Top에 둥근 이미지, 텍스트, 아이콘들을 넣어주었습니다.
+둥근이미지는 CircleAvatar로 구현하였습니다. ListTile로 구현할 수도 있었지만 Container 안에 위젯들을 넣어서 UI만 구현했습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220976619-2ea94782-5bb7-4837-b8eb-f887b25a5585.png)
