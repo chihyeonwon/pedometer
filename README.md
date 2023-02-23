@@ -38,3 +38,16 @@ AppBar 안에 TabBar를 사용해서 앱 바 바로 밑에 탭 바를 생성하�
 ![image](https://user-images.githubusercontent.com/58906858/220828492-1825be07-33ba-4f7d-b761-6211a1a35fb5.png)      
 ![image](https://user-images.githubusercontent.com/58906858/220828517-5459b44d-eacd-48d6-a6eb-5dd849a3c093.png)   
 ![image](https://user-images.githubusercontent.com/58906858/220829946-e3505e6b-dd5a-427b-bb4e-8f92ae9483ff.png)
+
+## TabBarView로 화면 분리하기
+```
+탭이 4개니까 controller의 length 프로퍼티의 값을 4로 수정한 후에 body에 TabBarView로
+Widget 4개를 생성하였습니다. 각 탭은 메인, 쇼핑, 쿠폰, 설정 화면으로 이루어져 있으며
+탭바 앱의 텍스트가 화면마다 달라지도록 수정하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220835086-0b209e47-db1c-48db-8b50-2245630d5752.png)   
+![image](https://user-images.githubusercontent.com/58906858/220835103-d496ca63-3b31-473a-907d-bdba54c9a117.png)
+![image](https://user-images.githubusercontent.com/58906858/220835267-04735b4c-1025-48c8-9bc5-cc262c653e19.png)   
+![image](https://user-images.githubusercontent.com/58906858/220835138-ea99ab3c-322d-4082-94a8-78421d39d661.png)
+![image](https://user-images.githubusercontent.com/58906858/220835149-11d53786-9380-4b60-ba86-18e8caa83ba4.png)
+
