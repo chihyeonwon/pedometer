@@ -19,3 +19,11 @@ WalkingHealth
 중점을 두고 프로젝트를 진행하였습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/220822339-35d5c360-e6a9-4030-91b9-628c55fd80c5.png)
+
+## 앱 바 클론코딩
+```
+앱 바의 색상과 텍스트, 아이콘을 넣는 작업을 하였습니다.
+아이콘을 넣을 때 왼쪽으로 넣으려면 leading, 오른쪽으로 넣으려면 action 프로퍼티에 넣어야 한다는 것을 배웠습니다.
+또한 앱 바의 다양한 속성값 elevation(양각), toolbarHeight 등을 사용해서 최대한 클론코딩하고자 하는 앱과 비슷하게 설정하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220824417-5de1a641-c1a8-44a9-b271-7c5553a4713e.png)
