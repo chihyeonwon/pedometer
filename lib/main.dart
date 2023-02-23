@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:walkinghealth/Screen/coupon_screen.dart';
+import 'package:walkinghealth/Screen/main_screen.dart';
+import 'package:walkinghealth/Screen/setting_screen.dart';
+import 'package:walkinghealth/Screen/shopping_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -112,6 +116,15 @@ class _HomeScreenState extends State<HomeScreen>
           ),
         ],
       ),
+      body:TabBarView(
+        controller: tabController,
+        children: <Widget>[
+          MainScreen(),
+          ShoppingScreen(),
+          CouponScreen(),
+          SettingScreen(),
+        ],
+      )
     );
   }
 }
