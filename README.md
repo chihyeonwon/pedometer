@@ -1,16 +1,14 @@
-# walkinghealth
+WalkingHealth
+```
+개발 툴 : Flutter
+개발 언어 : Dart
+개발 일시 : 2023-02-23 ~
+개발자 : Won Chi Hyeon
+```
 
-A new Flutter project.
+## 앱 개요
+```
+기능 : Sensor_plus 패키지를 활용한 만보기(스텝 트래커) 기능
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+자주 사용되는 UI를 학습하기 위한 프로젝트
+```
