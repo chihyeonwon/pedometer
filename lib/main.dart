@@ -32,11 +32,19 @@ class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController? tabController;
 
+  final List<String> titleList = ["홈", "쇼핑", "내 쿠폰함", "설정"];
+  String? currentTitle;
+
   TabBar get _tabBar => TabBar(
+        onTap: (int i) {
+          setState(() {
+            currentTitle = titleList[i];
+          });
+        },
         indicatorColor: Colors.black,
         labelColor: Colors.black,
         unselectedLabelColor: Colors.grey[400],
-        labelPadding: EdgeInsets.only(top:10.0, bottom:10.0),
+        labelPadding: EdgeInsets.only(top: 10.0, bottom: 10.0),
         controller: tabController,
         tabs: [
           const Tab(
@@ -46,11 +54,12 @@ class _HomeScreenState extends State<HomeScreen>
             icon: Icon(Icons.shopping_bag, size: 30.0),
           ),
           const Tab(
-            icon: Icon(Icons.credit_card_outlined, size:30.0),
+            icon: Icon(Icons.credit_card_outlined, size: 30.0),
           ),
           const Tab(
             icon: Icon(
-              Icons.settings, size:30.0,
+              Icons.settings,
+              size: 30.0,
             ),
           ),
         ],
@@ -60,6 +69,8 @@ class _HomeScreenState extends State<HomeScreen>
   void initState() {
     super.initState();
     tabController = TabController(length: 4, vsync: this);
+    currentTitle = titleList[0];
+    tabController!.addListener(changeTitle);
   }
 
   @override
@@ -68,63 +79,68 @@ class _HomeScreenState extends State<HomeScreen>
     super.dispose();
   }
 
+  void changeTitle() {
+    setState(() {
+      // get index of active tab & change current appbar title
+      currentTitle = titleList[tabController!.index];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.yellow[600],
-        bottom: PreferredSize(
-          preferredSize: _tabBar.preferredSize,
-          child: Material(
-            color: Colors.white,
-            child: _tabBar,
+        appBar: AppBar(
+          backgroundColor: Colors.yellow[600],
+          bottom: PreferredSize(
+            preferredSize: _tabBar.preferredSize,
+            child: Material(
+              color: Colors.white,
+              child: _tabBar,
+            ),
           ),
-        ),
-        elevation: 0.0,
-        // 양각 제거 (그림자)
-        toolbarHeight: 70.0,
-        // 앱 바 높이 설정
-        title: const Text(
-          '홈',
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            color: Colors.black,
-          ),
-        ),
-        centerTitle: true,
-        actions: <Widget>[
-          IconButton(
-            icon: const Padding(
-              padding: EdgeInsets.only(
-                left: 10.0,
+          elevation: 0.0,
+          // 양각 제거 (그림자)
+          toolbarHeight: 70.0,
+          // 앱 바 높이 설정
+          title: Text(currentTitle!,
+              style:
+                  TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold
+                  )),
+          centerTitle: true,
+          actions: <Widget>[
+            IconButton(
+              icon: const Padding(
+                padding: EdgeInsets.only(
+                  left: 10.0,
+                ),
+                child: Icon(
+                  Icons.notifications,
+                  color: Colors.black,
+                  size: 30.0,
+                ),
               ),
-              child: Icon(
-                Icons.notifications,
+              onPressed: () {}, // 잠금 화면으로 이동
+            ),
+            IconButton(
+              icon: const Icon(
+                Icons.screen_lock_portrait,
                 color: Colors.black,
                 size: 30.0,
               ),
+              onPressed: () {}, // 잠금 화면으로 이동
             ),
-            onPressed: () {}, // 잠금 화면으로 이동
-          ),
-          IconButton(
-            icon: const Icon(
-              Icons.screen_lock_portrait,
-              color: Colors.black,
-              size: 30.0,
-            ),
-            onPressed: () {}, // 잠금 화면으로 이동
-          ),
-        ],
-      ),
-      body:TabBarView(
-        controller: tabController,
-        children: <Widget>[
-          MainScreen(),
-          ShoppingScreen(),
-          CouponScreen(),
-          SettingScreen(),
-        ],
-      )
-    );
+          ],
+        ),
+        body: TabBarView(
+          controller: tabController,
+          children: <Widget>[
+            MainScreen(),
+            ShoppingScreen(),
+            CouponScreen(),
+            SettingScreen(),
+          ],
+        ));
   }
 }
