@@ -29,27 +29,28 @@ class _HomeScreenState extends State<HomeScreen>
   TabController? tabController;
 
   TabBar get _tabBar => TabBar(
-    indicatorColor: Colors.black,
-    labelColor: Colors.black,
-    unselectedLabelColor: Colors.grey[400],
-    controller: tabController,
-    tabs: [
-      const Tab(
-        icon: Icon(Icons.home),
-      ),
-      const Tab(
-        icon: Icon(Icons.shopping_bag),
-      ),
-      const Tab(
-        icon: Icon(Icons.credit_card_outlined),
-      ),
-      const Tab(
-        icon: Icon(
-          Icons.settings,
-        ),
-      ),
-    ],
-  );
+        indicatorColor: Colors.black,
+        labelColor: Colors.black,
+        unselectedLabelColor: Colors.grey[400],
+        labelPadding: EdgeInsets.only(top:10.0, bottom:10.0),
+        controller: tabController,
+        tabs: [
+          const Tab(
+            icon: Icon(Icons.home, size: 30.0),
+          ),
+          const Tab(
+            icon: Icon(Icons.shopping_bag, size: 30.0),
+          ),
+          const Tab(
+            icon: Icon(Icons.credit_card_outlined, size:30.0),
+          ),
+          const Tab(
+            icon: Icon(
+              Icons.settings, size:30.0,
+            ),
+          ),
+        ],
+      );
 
   @override
   void initState() {
@@ -67,16 +68,18 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.yellow[600],
         bottom: PreferredSize(
           preferredSize: _tabBar.preferredSize,
           child: Material(
-            color: Colors.white, //<-- SEE HERE
+            color: Colors.white,
             child: _tabBar,
           ),
         ),
-        elevation: 0.0, // 양각 제거 (그림자)
-        toolbarHeight: 50.0, // 앱 바 높이 설정
+        elevation: 0.0,
+        // 양각 제거 (그림자)
+        toolbarHeight: 70.0,
+        // 앱 바 높이 설정
         title: const Text(
           '홈',
           style: TextStyle(
