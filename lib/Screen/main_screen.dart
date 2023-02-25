@@ -65,10 +65,16 @@ class Middle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Placeholder(
-      child: Image.asset(
-        'asset/img/image.png',
-        height:500.0,
-        fit: BoxFit.fill,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'asset/img/image.png',
+            width:MediaQuery.of(context).size.width,
+            height:MediaQuery.of(context).size.height,
+            fit: BoxFit.fill,
+          ),
+        ],
       ),
     );
   }
