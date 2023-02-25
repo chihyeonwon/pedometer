@@ -98,6 +98,24 @@ class Middle extends StatelessWidget {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.center,
+            child: CircleAvatar(
+              radius: 140.0,
+              backgroundColor: Colors.black12.withOpacity(0.2),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('하루만보걷기',
+                      style: TextStyle(fontSize: 18.0, color: Colors.white,)),
+                  Text('94',
+                      style: TextStyle(fontSize:70.0, color: Colors.white,)),
+                  Text('걸음',
+                      style: TextStyle(fontSize: 18.0, color: Colors.white,)),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
