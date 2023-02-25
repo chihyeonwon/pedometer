@@ -9,11 +9,7 @@ class MainScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: const [
-          SizedBox(
-            width: 400,
-            height: 100,
-            child: Top(),
-          ),
+          Top(),
           Middle(),
         ],
       ),
@@ -26,42 +22,39 @@ class Top extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 30.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(11.0),
-            child: CircleAvatar(
-              backgroundImage: AssetImage('asset/img/image.png'),
-              radius: 30,
-            ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Padding(
+          padding: EdgeInsets.all(11.0),
+          child: CircleAvatar(
+            backgroundImage: AssetImage('asset/img/image.png'),
+            radius: 30,
           ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('원치현',
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600)),
+        ),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text('원치현',
+              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 150.0,
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 150.0,
-            ),
-            child: Row(
-              children: const [
-                Icon(
-                  Icons.attach_money,
-                  size: 30.0,
-                ),
-                Text('4,230캐시',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                    ))
-              ],
-            ),
+          child: Row(
+            children: const [
+              Icon(
+                Icons.attach_money,
+                size: 30.0,
+              ),
+              Text('4,230캐시',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                  ))
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -71,8 +64,12 @@ class Middle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Placeholder(
+      child: Image.asset(
+        'asset/img/image.png',
+        height:500.0,
+        fit: BoxFit.fill,
+      ),
+    );
   }
 }
-
-
