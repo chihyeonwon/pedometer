@@ -65,14 +65,38 @@ class Middle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Placeholder(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Stack(
         children: [
           Image.asset(
             'asset/img/image.png',
-            width:MediaQuery.of(context).size.width,
-            height:MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
             fit: BoxFit.fill,
+          ),
+          Positioned(
+            right: 5.0,
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Row(
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.medication_rounded),
+                      iconSize: 30.0,
+                      color: Colors.white),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.photo_camera_back),
+                      iconSize: 30.0,
+                      color: Colors.white),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.camera_alt),
+                      iconSize: 30.0,
+                      color: Colors.white),
+                ],
+              ),
+            ),
           ),
         ],
       ),
