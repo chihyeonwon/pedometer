@@ -76,3 +76,12 @@ UI를 구현하였습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221351556-ee7b3786-7c14-4db1-9163-6a8b6f5ab9c1.png)   
 ![image](https://user-images.githubusercontent.com/58906858/221351542-2a990ba8-a79a-45d0-9eaf-4b25322577f7.png)
+
+## MainScreen Middle의 가운데 위젯 구현
+```
+가운데에는 Opacity가 적용된 둥근 Container안에 만보기 횟수 카운트 텍스트를 배치하였습니다.
+Position와 Align 위젯으로 위젯들의 위치를 적절하게 위치시키는 데 노력을 기울였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221352141-803a5338-f412-4720-ae31-a56489e546d7.png)   
+![image](https://user-images.githubusercontent.com/58906858/221352149-f0011aba-a1b2-47d1-8dc9-012440ca8e91.png)
+
