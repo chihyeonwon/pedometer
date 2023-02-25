@@ -68,3 +68,11 @@ Middle에는 사진과 걸음 수, 갤러리, 사진 촬영 기능 아이콘과 
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221351224-8e2be125-6151-492e-b31c-5cf001b20fec.png)   
 ![image](https://user-images.githubusercontent.com/58906858/221351158-602be2a8-b3ff-4587-a266-e1fb13ea4b67.png)
+
+## MainScreen Middle 아이콘 위젯 구현
+```
+상단 오른쪽에 3개의 아이콘 버튼 위젯이 위치하도록 하였습니다. 사진 촬영, 갤러리 등 기능은 추후에 구현하기로 하고
+UI를 구현하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221351556-ee7b3786-7c14-4db1-9163-6a8b6f5ab9c1.png)   
+![image](https://user-images.githubusercontent.com/58906858/221351542-2a990ba8-a79a-45d0-9eaf-4b25322577f7.png)
