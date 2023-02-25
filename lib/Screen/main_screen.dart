@@ -116,6 +116,62 @@ class Middle extends StatelessWidget {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right:20.0),
+                    child: CircleAvatar(
+                      radius: 30.0,
+                      backgroundColor: Colors.black12.withOpacity(0.2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('3',
+                              style: TextStyle(fontSize: 18.0, color: Colors.white,)),
+                          Text('kcal',
+                              style: TextStyle(fontSize:18.0, color: Colors.white,)),
+                        ],
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    radius: 30.0,
+                    backgroundColor: Colors.black12.withOpacity(0.2),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('1',
+                            style: TextStyle(fontSize: 18.0, color: Colors.white,)),
+                        Text('분',
+                            style: TextStyle(fontSize:18.0, color: Colors.white,)),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left:20.0),
+                    child: CircleAvatar(
+                      radius: 30.0,
+                      backgroundColor: Colors.black12.withOpacity(0.2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('69',
+                              style: TextStyle(fontSize: 18.0, color: Colors.white,)),
+                          Text('m',
+                              style: TextStyle(fontSize:18.0, color: Colors.white,)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
