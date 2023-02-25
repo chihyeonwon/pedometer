@@ -85,3 +85,9 @@ Position와 Align 위젯으로 위젯들의 위치를 적절하게 위치시키�
 ![image](https://user-images.githubusercontent.com/58906858/221352141-803a5338-f412-4720-ae31-a56489e546d7.png)   
 ![image](https://user-images.githubusercontent.com/58906858/221352149-f0011aba-a1b2-47d1-8dc9-012440ca8e91.png)
 
+## MainScreen Middle의 아래 위젯 구현
+```
+맨 아래에는 가운데 구현한 Opacity Container와 텍스트를 복사해서 3개를 가로로 배치하고 
+padding값을 주어 간격을 두고 배치하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221352410-595ba5d0-e43d-4e3b-9599-cca31aadc2d5.png)
