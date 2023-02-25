@@ -91,3 +91,11 @@ Position와 Align 위젯으로 위젯들의 위치를 적절하게 위치시키�
 padding값을 주어 간격을 두고 배치하였습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221352410-595ba5d0-e43d-4e3b-9599-cca31aadc2d5.png)
+
+## MainScreen Bottom 위젯 구현
+```
+Bottom은 리스트 형태로 탭을 하면 다른 페이지로 이동하는 형태로 InkWell을 사용하여 Tap했을 때 애니메이션을 주고
+라우팅 기능은 나중에 구현, Container안에 텍스트와 아이콘을 적절하게 배치하여 완성하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221356206-42918ebf-5e7a-457b-af8c-ff2bdd8ff182.png)   
+![image](https://user-images.githubusercontent.com/58906858/221356171-9ee58815-c8bf-47b6-9f62-21bb8586175d.png)
