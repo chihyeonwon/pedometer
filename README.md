@@ -114,3 +114,11 @@ Bottom은 리스트 형태로 탭을 하면 다른 페이지로 이동하는 형
 Top은 프로필 사진, 화면, 캐시등을 보여주는 UI로 MainScreen의 Top 클래스를 복사하여 붙여넣었습니다.(코드의 재활용)
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221391351-00361314-62dc-4379-bc53-73224a06bbb6.png)
+
+## ShoppingScreen Middle Carousel Slider위젯 구현
+```
+Middle은 이미지가 3개 들어가 있는 Carousel Slider와 베스트 상품을 나열하는 Container로 이루어져있습니다.
+그 중에 Carousel Slider를 자동으로 넘어가도록 구현하고 페이지의 index를 보여주는 indicator를 추가하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221393428-2abda5b7-77be-4a0b-890e-6e7ce2637207.png)
+
