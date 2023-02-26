@@ -83,6 +83,9 @@ class _MiddleState extends State<Middle> {
           children: [
             CarouselSlider(
               options: CarouselOptions(
+                autoPlay:true,
+                autoPlayInterval:const Duration(seconds:1),
+                autoPlayAnimationDuration: Duration(milliseconds: 400),
                 onPageChanged: (index, reason) {
                   setState(() {
                     _current = index;
