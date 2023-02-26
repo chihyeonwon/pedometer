@@ -23,7 +23,40 @@ class Top extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Padding(
+          padding: EdgeInsets.all(11.0),
+          child: CircleAvatar(
+            backgroundImage: AssetImage('asset/img/image.png'),
+            radius: 30,
+          ),
+        ),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text('원치현',
+              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 150.0,
+          ),
+          child: Row(
+            children: const [
+              Icon(
+                Icons.attach_money,
+                size: 30.0,
+              ),
+              Text('4,230캐시',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                  ))
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
 
