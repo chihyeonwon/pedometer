@@ -265,7 +265,7 @@ class Bottom extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 15.0),
-                          child: Icon(Icons.shopping_basket,
+                          child: Icon(Icons.attach_money,
                               size: 60.0, color: Colors.yellow[800]),
                         ),
                       ],
