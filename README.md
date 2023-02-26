@@ -108,3 +108,9 @@ Bottom은 리스트 형태로 탭을 하면 다른 페이지로 이동하는 형
 
 ### 클론 코딩할 쇼핑 스크린
 ![image](https://user-images.githubusercontent.com/58906858/221391147-45791059-797e-48de-b4b1-0b31b7bc840c.png)
+
+## ShoppingScreen Top 위젯 구현
+```
+Top은 프로필 사진, 화면, 캐시등을 보여주는 UI로 MainScreen의 Top 클래스를 복사하여 붙여넣었습니다.(코드의 재활용)
+```
+![image](https://user-images.githubusercontent.com/58906858/221391351-00361314-62dc-4379-bc53-73224a06bbb6.png)
