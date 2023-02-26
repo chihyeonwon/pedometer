@@ -91,7 +91,7 @@ class _MiddleState extends State<Middle> {
                     _current = index;
                   });
                 },
-                height: 200.0,
+                height: 160.0,
                 viewportFraction: 1, // 페이지 당 1개의 슬라이더
               ),
               items: item.map((i) {
