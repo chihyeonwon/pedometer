@@ -99,3 +99,12 @@ Bottom은 리스트 형태로 탭을 하면 다른 페이지로 이동하는 형
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221356206-42918ebf-5e7a-457b-af8c-ff2bdd8ff182.png)   
 ![image](https://user-images.githubusercontent.com/58906858/221356171-9ee58815-c8bf-47b6-9f62-21bb8586175d.png)
+
+## ShoppingScreen 화면 분리
+```
+쇼핑 스크린 화면 역시 프로필Top, 중간에 Slider와 베스트상, 하단에 리스트형태의 컨테이너를 각각 클래스로 분리하여
+구현하겠습니다.
+```
+
+### 클론 코딩할 쇼핑 스크린
+![image](https://user-images.githubusercontent.com/58906858/221391147-45791059-797e-48de-b4b1-0b31b7bc840c.png)
