@@ -149,6 +149,22 @@ class _MiddleState extends State<Middle> {
                       style:
                           TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600)),
                 ),
+                Positioned(
+                  right:10.0,
+                  top:5.0,
+                  child: InkWell(
+                    onTap:() {}, // 더보기 페이지로 이동
+                    child: Container(
+                      height:50.0,
+                      child: Row(
+                        children: [
+                          Text('더보기', style:TextStyle(fontSize:16.0,)),
+                          Icon(Icons.arrow_forward_ios, size:14.0,)
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
                 Stack(
                   children: [
                     Positioned(
