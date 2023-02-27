@@ -139,8 +139,17 @@ class _MiddleState extends State<Middle> {
           ],
         ),
         Container(
-          height:120.0,
-        ),
+            color: Colors.white,
+            height: 200.0,
+            child: Stack(children: [
+              Positioned(
+                top: 12.0,
+                left: 18.0,
+                child: Text('베스트 상품',
+                    style:
+                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600)),
+              ),
+            ])),
       ],
     ));
   }
