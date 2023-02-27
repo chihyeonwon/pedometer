@@ -138,18 +138,108 @@ class _MiddleState extends State<Middle> {
             ),
           ],
         ),
-        Container(
-            color: Colors.white,
-            height: 200.0,
-            child: Stack(children: [
-              Positioned(
-                top: 12.0,
-                left: 18.0,
-                child: Text('베스트 상품',
-                    style:
-                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600)),
-              ),
-            ])),
+        Material(
+          child: Container(
+           height: 200.0,
+              child: Stack(children: [
+                Positioned(
+                  top: 12.0,
+                  left: 18.0,
+                  child: Text('베스트 상품',
+                      style:
+                          TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600)),
+                ),
+                Stack(
+                  children: [
+                    Positioned(
+                      top:60.0,
+                      left:15.0,
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 25.0),
+                              child: InkWell(
+                                onTap:(){ }, // 상품 페이지로 이동
+                                child: Column(
+                                  children: [
+                                    Ink(
+                                      width: 90.0,
+                                      height: 90.0,
+                                      decoration: BoxDecoration(
+                                        color:Colors.teal[100],
+                                      ),
+                                      child: Icon(
+                                        Icons.shopping_cart_rounded,
+                                        size: 60.0,
+                                      ),
+                                    ),
+                                    Text('6,300캐시',
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                        ))
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 25.0),
+                              child: InkWell(
+                                onTap:(){ }, // 상품 페이지로 이동
+                                child: Column(
+                                  children: [
+                                    Ink(
+                                      width: 90.0,
+                                      height: 90.0,
+                                      decoration: BoxDecoration(
+                                        color:Colors.teal[100],
+                                      ),
+                                      child: Icon(
+                                        Icons.shopping_cart_rounded,
+                                        size: 60.0,
+                                      ),
+                                    ),
+                                    Text('6,300캐시',
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                        ))
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 25.0),
+                              child: InkWell(
+                                onTap:(){ }, // 상품 페이지로 이동
+                                child: Column(
+                                  children: [
+                                    Ink(
+                                      width: 90.0,
+                                      height: 90.0,
+                                      decoration: BoxDecoration(
+                                        color:Colors.teal[100],
+                                      ),
+                                      child: Icon(
+                                        Icons.shopping_cart_rounded,
+                                        size: 60.0,
+                                      ),
+                                    ),
+                                    Text('7,000캐시',
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                        ))
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ])),
+        ),
       ],
     ));
   }
