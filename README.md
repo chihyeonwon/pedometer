@@ -122,3 +122,9 @@ Middle은 이미지가 3개 들어가 있는 Carousel Slider와 베스트 상품
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221393428-2abda5b7-77be-4a0b-890e-6e7ce2637207.png)
 
+## ShoppingScreen Middle 베스트 상품 위젯 구현
+```
+베스트 상품 위젯은 Container안에 여러 위젯들이 Stack으로 이루어져있고
+InkWell로 탭을 했을 때 상품 구매 페이지, 더보기 페이지로 이동하도록 이벤트를 넣어주었습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221482941-43cc9328-fa3b-4ca5-9b23-c7b893f933ae.png)
