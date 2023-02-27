@@ -83,8 +83,8 @@ class _MiddleState extends State<Middle> {
           children: [
             CarouselSlider(
               options: CarouselOptions(
-                autoPlay:true,
-                autoPlayInterval:const Duration(seconds:1),
+                autoPlay: true,
+                autoPlayInterval: const Duration(seconds: 5),
                 autoPlayAnimationDuration: Duration(milliseconds: 400),
                 onPageChanged: (index, reason) {
                   setState(() {
@@ -110,7 +110,7 @@ class _MiddleState extends State<Middle> {
                             ),
                           ),
                           Positioned(
-                            bottom:10.0,
+                            bottom: 10.0,
                             left: 16.0,
                             child: Row(
                               children: [
@@ -137,6 +137,9 @@ class _MiddleState extends State<Middle> {
               }).toList(),
             ),
           ],
+        ),
+        Container(
+          height:120.0,
         ),
       ],
     ));
