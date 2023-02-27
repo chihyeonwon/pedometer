@@ -108,6 +108,8 @@ Bottom은 리스트 형태로 탭을 하면 다른 페이지로 이동하는 형
 
 ### 클론 코딩할 쇼핑 스크린
 ![image](https://user-images.githubusercontent.com/58906858/221391147-45791059-797e-48de-b4b1-0b31b7bc840c.png)
+![image](https://user-images.githubusercontent.com/58906858/221487352-2a6298fb-1454-402b-9b3c-c800a4c514f9.png)
+
 
 ## ShoppingScreen Top 위젯 구현
 ```
