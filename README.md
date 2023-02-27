@@ -128,3 +128,10 @@ Middle은 이미지가 3개 들어가 있는 Carousel Slider와 베스트 상품
 InkWell로 탭을 했을 때 상품 구매 페이지, 더보기 페이지로 이동하도록 이벤트를 넣어주었습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221482941-43cc9328-fa3b-4ca5-9b23-c7b893f933ae.png)
+
+## ShoppingScreen Bottom 위젯 구현
+```
+Bottom 위젯에는 Container가 리스트식으로 배열되어 있습니다.
+MainScreen의 InkWell을 재활용하여 height만 변경하고 사용하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221487029-df783738-566f-43db-a4a4-9440c61e2629.png)
