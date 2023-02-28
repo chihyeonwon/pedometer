@@ -90,6 +90,11 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          shape:Border(
+            bottom:BorderSide(
+              color:Colors.grey,
+            ),
+          ),
           backgroundColor: Colors.yellow[600],
           bottom: PreferredSize(
             preferredSize: _tabBar.preferredSize,
