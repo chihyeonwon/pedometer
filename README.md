@@ -137,3 +137,12 @@ Bottom 위젯에는 Container가 리스트식으로 배열되어 있습니다.
 MainScreen의 InkWell을 재활용하여 height만 변경하고 사용하였습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221487029-df783738-566f-43db-a4a4-9440c61e2629.png)
+
+## CouponScreen Top 위젯 구현
+```
+CouponScreen의 Top 부분은 ShoppingScreen Coursel Slider의 scrollDirection을 Axis.vertical 수직으로 이동하도록 수정한 후에
+재활용하고 안에 당첨된 상품과 당첨된 사람의 이름을 받아와서 출력합니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221755714-40cb90a9-8ea3-491b-ac30-e1c9a6324fd6.png)   
+![image](https://user-images.githubusercontent.com/58906858/221755641-7e2c1910-d174-48c1-84fe-8f41b4d5bf8c.png)
+
