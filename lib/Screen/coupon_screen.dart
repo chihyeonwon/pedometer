@@ -99,12 +99,106 @@ class _TopState extends State<Top> {
   }
 }
 
-class Middle extends StatelessWidget {
+class Middle extends StatefulWidget {
   const Middle({Key? key}) : super(key: key);
 
   @override
+  State<Middle> createState() => _MiddleState();
+}
+
+class _MiddleState extends State<Middle> {
+
+  final List<String> productName = <String>['롯데)꼬깔콘고소한맛1500','롯데)꼬깔콘군옥수수1500','c','d'];
+
+  final List<String> productLimit = <String>['2023-03-29까지', '2023-03-29까지', 'c', 'd'];
+
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Material(
+      child: Container(
+          height: 260.0,
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Container(
+                    height: 30.0,
+                    color: Colors.grey[300],
+                  ),
+                  Positioned(
+                    left: 20.0,
+                    top: 4.0,
+                    child: Text('미사용 쿠폰',
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  )
+                ],
+              ),
+              Expanded(
+                child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {}, // 쿠폰 사용 페이지로 이동
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Icon(
+                                Icons.fastfood,
+                                size: 40.0,
+                              ),
+                            ),
+                            Positioned(
+                              top: 20.0,
+                              left: 100.0,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('GS25',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 15.0,
+                                      )),
+                                  Text('${productName[index]}',
+                                      style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.bold)),
+                                  Text('${productLimit[index]}',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 18.0,
+                                      )),
+                                ],
+                              ),
+                            ),
+                            Positioned(
+                              top:40.0,
+                              right:10.0,
+                              child: Text('사용하기',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                  separatorBuilder: (context, index) => Divider(
+                    color: Colors.grey[300],
+                    thickness: 3,
+                  ),
+                  itemCount: 2,
+                ),
+              )
+            ],
+          )),
+    );
   }
 }
 
