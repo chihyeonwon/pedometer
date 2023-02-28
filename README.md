@@ -195,3 +195,9 @@ value 값이 모두 isCert로 같아서 이중인중 스위치를 건들였을 �
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221928442-88009518-a0ff-472c-b7d4-6ebf72bb1a42.png)   
 ![image](https://user-images.githubusercontent.com/58906858/221928241-1f88174c-e6b7-4d17-84c3-538111e27215.png)
+
+## SettingScreen Middle 알림, 앱정보 위젯 구현
+```
+SettingScreen의 알림, 앱정보 Container도 위의 내정보 코드를 재활용하여 쉽게 구현하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221930202-bdd6732c-3ade-4241-96a0-3f1e13b1fab1.png)
