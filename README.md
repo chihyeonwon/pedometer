@@ -146,3 +146,11 @@ CouponScreen의 Top 부분은 ShoppingScreen Coursel Slider의 scrollDirection�
 ![image](https://user-images.githubusercontent.com/58906858/221755714-40cb90a9-8ea3-491b-ac30-e1c9a6324fd6.png)   
 ![image](https://user-images.githubusercontent.com/58906858/221755641-7e2c1910-d174-48c1-84fe-8f41b4d5bf8c.png)
 
+## CouponScreen Middle 미사용 쿠폰 위젯 구현
+```
+미사용 쿠폰들을 보여주는 위젯으로 ListView.separated를 사용해서 Divider로 구분하고
+각 품목의 이름과 사용기한을 각각 List<String>에 저장하고 ListView Builder의 index를 사용해서
+build 해주었습니다. 향후에 통신쪽에서 받은 데이터를 Future타입으로 선언한 후에 FutureBuilder의 형태로
+수정하면 API에 따른 쿠폰들을 보여줄 수 있을 것으로 예상합니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221768240-25a5aef0-e03c-44ef-899f-3892e872e3be.png)
