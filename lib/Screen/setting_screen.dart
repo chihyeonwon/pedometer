@@ -489,7 +489,7 @@ class _MiddleState extends State<Middle> {
               ],
             ),
             InkWell(
-              onTap: () {}, // 캐시웨어 페이지로 이동
+              onTap: () {}, // 푸시 알림설정 페이지로 이동
               child: Ink(
                   height: 65.0,
                   decoration: BoxDecoration(
@@ -502,7 +502,7 @@ class _MiddleState extends State<Middle> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 16.0),
-                        child: Text('캐시웨어',
+                        child: Text('푸시 알림설정',
                             style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
