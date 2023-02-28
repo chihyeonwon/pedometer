@@ -185,3 +185,13 @@ Middle의 내정보를 Container로 구현하였습니다. 마지막에 Switch �
 InkWell을 눌렀을 때도 스위치가 작동하도록 하였습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221926576-1d8a9620-9266-4fe9-9748-7971029c1e82.png)
+
+## SettingScreen Middle 위젯 잠금화면관리 위젯 구현
+```
+잠금화면관리 위젯 역시 내 정보 위젯과 비슷하지만 여러 스위치를 구현하는 작업 도중에
+value 값이 모두 isCert로 같아서 이중인중 스위치를 건들였을 때 다른 스위치들이 같이 작동하는 문제가 발생,
+이를 해결하기 위해서 value값을 잠금화면사용하기(isLock), 효과음(isSound), 진동(isVib), 뉴스컨텐츠보기(isNews)로 따로
+분리해서 선언하여 스위치들이 따로 작동하고 return값을 내도록 설정하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221928442-88009518-a0ff-472c-b7d4-6ebf72bb1a42.png)   
+![image](https://user-images.githubusercontent.com/58906858/221928241-1f88174c-e6b7-4d17-84c3-538111e27215.png)
