@@ -177,3 +177,11 @@ Top 위젯에 버전 정보 Container를 구현하였습니다.
 Middle의 내정보를 Container로 구현하였습니다. 마지막에 Switch 클래스를 사용해서 스위치를 구현하였습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221923079-10191d66-9914-4aca-b575-9093cb735d53.png)
+
+## SettingScreen Middle 위젯 스위치 기능 상세 구현
+```
+스위치의 onChanged로 스위치의 bool 값을 변화시킬 수도 있어야 하지만 그 주위의 InkWell을 클릭해도
+스위치가 작동하도록 하기 위해서 onTap 옵션의 setState에 Boolean 반대값을 주는 알고리즘을 사용하여
+InkWell을 눌렀을 때도 스위치가 작동하도록 하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221926576-1d8a9620-9266-4fe9-9748-7971029c1e82.png)
