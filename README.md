@@ -162,3 +162,12 @@ List<String>의 변수이름을 미사용 쿠폰과 다르게 하여 이를 구�
 받아서 수정할 예정입니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221770392-2ec6f48a-84e5-406a-b3fd-01e4739f2491.png)
+
+## SettingScreen Top 위젯 구현
+```
+SettingScreen(설정)페이지는 버전 정보, 내정보, 잠금화면 관리, 알림, 앱정보의 리스트들로 구성되어 있습니다.
+
+Top 위젯에 버전 정보 Container를 구현하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221904608-d916047b-a00d-4fbc-a08f-e84b5619e5ba.png)
+![image](https://user-images.githubusercontent.com/58906858/221911054-cf155666-3d6a-4623-ade2-a3eddb6aa871.png)
