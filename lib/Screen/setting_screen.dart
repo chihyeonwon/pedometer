@@ -7,13 +7,13 @@ class SettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-      child: Column(
-        children: const [
-          Top(),
-          Middle(),
-        ],
-      ),
-    ));
+          child: Column(
+            children: const [
+              Top(),
+              Middle(),
+            ],
+          ),
+        ));
   }
 }
 
@@ -81,8 +81,12 @@ class Top extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left:55.0),
-            child: Text('최신 버전 사용 중', style: TextStyle(fontWeight:FontWeight.bold, fontSize:15.0,)),
+            padding: const EdgeInsets.only(left: 55.0),
+            child: Text('최신 버전 사용 중',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0,
+                )),
           ),
         ],
       ),
@@ -90,11 +94,173 @@ class Top extends StatelessWidget {
   }
 }
 
-class Middle extends StatelessWidget {
+class Middle extends StatefulWidget {
   const Middle({Key? key}) : super(key: key);
 
   @override
+  State<Middle> createState() => _MiddleState();
+}
+
+class _MiddleState extends State<Middle> {
+
+  bool _isChecked = false;
+
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Material(
+      child: Container(
+          height: MediaQuery
+              .of(context)
+              .size
+              .height,
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Container(
+                    height: 30.0,
+                    color: Colors.grey[300],
+                  ),
+                  Positioned(
+                    left: 20.0,
+                    top: 4.0,
+                    child: Text('내정보',
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ),
+                ],
+              ),
+              InkWell(
+                onTap: () {}, // 프로필설정 페이지로 이동
+                child: Ink(
+                    height: 65.0,
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                              color: Colors.grey,
+                            ))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16.0),
+                          child: Text('프로필설정',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 16.0),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            size: 25.0,
+                          ),
+                        ),
+                      ],
+                    )),
+              ),
+              InkWell(
+                onTap: () {}, // 캐시적립내역 페이지로 이동
+                child: Ink(
+                    height: 65.0,
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                              color: Colors.grey,
+                            ))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16.0),
+                          child: Text('캐시적립내역',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 16.0),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            size: 25.0,
+                          ),
+                        ),
+                      ],
+                    )),
+              ),
+              InkWell(
+                onTap: () {}, // 캐시웨어 페이지로 이동
+                child: Ink(
+                    height: 65.0,
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                              color: Colors.grey,
+                            ))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16.0),
+                          child: Text('캐시웨어',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 16.0),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            size: 25.0,
+                          ),
+                        ),
+                      ],
+                    )),
+              ),
+              InkWell(
+                  onTap: () {}, // 이중인증 페이지로 이동
+                  child: Ink(
+                    height: 65.0,
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                              color: Colors.grey,
+                            ))),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                    Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: Text('이중인증',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ),
+                  Padding(
+                      padding: const EdgeInsets.only(right: 16.0),
+                      child: Switch(
+                        value:_isChecked,
+                          onChanged: (value) {
+                            setState(() {
+                              _isChecked = value;
+                            });
+                  }
+                  )
+              ),
+            ],
+          )),
+    ),]
+    ,
+    )
+    ,
+    )
+    ,
+    );
   }
 }
