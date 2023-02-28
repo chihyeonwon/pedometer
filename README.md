@@ -171,3 +171,9 @@ Top 위젯에 버전 정보 Container를 구현하였습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/221904608-d916047b-a00d-4fbc-a08f-e84b5619e5ba.png)
 ![image](https://user-images.githubusercontent.com/58906858/221911054-cf155666-3d6a-4623-ade2-a3eddb6aa871.png)
+
+## SettingScreen Middle 위젯 내정보 구현
+```
+Middle의 내정보를 Container로 구현하였습니다. 마지막에 Switch 클래스를 사용해서 스위치를 구현하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/221923079-10191d66-9914-4aca-b575-9093cb735d53.png)
