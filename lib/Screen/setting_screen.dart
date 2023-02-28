@@ -433,9 +433,11 @@ class _MiddleState extends State<Middle> {
                   )),
             ),
             InkWell(
-              onTap: () {setState(() {
-                _isNews = !_isNews;
-              });},
+              onTap: () {
+                setState(() {
+                  _isNews = !_isNews;
+                });
+              },
               child: Ink(
                   height: 65.0,
                   decoration: BoxDecoration(
@@ -495,6 +497,53 @@ class _MiddleState extends State<Middle> {
                   decoration: BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
+                    color: Colors.grey,
+                  ))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Text('푸시 알림설정',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 25.0,
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+            Stack(
+              children: [
+                Container(
+                  height: 30.0,
+                  color: Colors.grey[300],
+                ),
+                Positioned(
+                  left: 20.0,
+                  top: 4.0,
+                  child: Text('앱정보',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.bold,
+                      )),
+                ),
+              ],
+            ),
+            InkWell(
+              onTap: () {}, // 자주하는 질문 페이지로 이동
+              child: Ink(
+                  height: 65.0,
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
                             color: Colors.grey,
                           ))),
                   child: Row(
@@ -502,7 +551,127 @@ class _MiddleState extends State<Middle> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 16.0),
-                        child: Text('푸시 알림설정',
+                        child: Text('자주하는질문',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 25.0,
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+            InkWell(
+              onTap: () {}, // 불편사항 신고하기 페이지로 이동
+              child: Ink(
+                  height: 65.0,
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                          ))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Text('불편사항 신고하기',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 25.0,
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+            InkWell(
+              onTap: () {}, // 이용약관동의 페이지로 이동
+              child: Ink(
+                  height: 65.0,
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                          ))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Text('이용약관동의',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 25.0,
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+            InkWell(
+              onTap: () {}, // 개인정보처리방침 페이지로 이동
+              child: Ink(
+                  height: 65.0,
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                          ))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Text('개인정보처리방침',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 25.0,
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+            InkWell(
+              onTap: () {}, // 위치기반 서비스 이용약관 페이지로 이동
+              child: Ink(
+                  height: 65.0,
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                          ))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Text('위치기반 서비스 이용약관',
                             style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
