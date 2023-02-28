@@ -102,11 +102,11 @@ class Middle extends StatefulWidget {
 }
 
 class _MiddleState extends State<Middle> {
-  bool _isCert = false;
-  bool _isLock = false;
-  bool _isSound = false;
-  bool _isVib = false;
-  bool _isNews = false;
+  bool _isCert = false; // 이중인증
+  bool _isLock = false; // 잠금화면 사용하기
+  bool _isSound = false; // 효과음
+  bool _isVib = false; // 진동
+  bool _isNews = false; // 뉴스 컨텐츠 보기
 
   @override
   Widget build(BuildContext context) {
