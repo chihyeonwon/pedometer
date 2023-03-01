@@ -8,6 +8,7 @@ class CouponScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
+          clipBehavior: Clip.hardEdge ,
       child: Column(
         children: const [
           Top(),
@@ -35,6 +36,7 @@ class _TopState extends State<Top> {
     return Material(
       child: CarouselSlider(
         options: CarouselOptions(
+
           scrollDirection: Axis.vertical,
           autoPlay: true,
           autoPlayInterval: const Duration(seconds: 5),
@@ -140,6 +142,7 @@ class _MiddleState extends State<Middle> {
               ),
               Expanded(
                 child: ListView.separated(
+                  physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {}, // 쿠폰 사용 페이지로 이동
@@ -218,6 +221,7 @@ class _MiddleState extends State<Middle> {
               ),
               Expanded(
                 child: ListView.separated(
+                  physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {}, // 쿠폰 사용 페이지로 이동
