@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shake/shake.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -60,8 +61,41 @@ class Top extends StatelessWidget {
   }
 }
 
-class Middle extends StatelessWidget {
+class Middle extends StatefulWidget {
   const Middle({Key? key}) : super(key: key);
+
+  @override
+  State<Middle> createState() => _MiddleState();
+}
+
+class _MiddleState extends State<Middle> with TickerProviderStateMixin {
+  int count = 1; // 걸음 수
+
+  void onPhoneShake() {
+    // 감지 후 실행할 함수
+    setState(() {
+      count = count + 1;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    shakeDetector = ShakeDetector.autoStart( // 흔들기 감지 즉시 시작
+      shakeSlopTimeMS: 1, // 감지 주기
+      shakeThresholdGravity: 10000, // 감지 민감도
+      onPhoneShake: onPhoneShake, // 감지 후 실행할 함수
+    );
+  }
+
+  @override
+  void dispose() {
+    shakeDetector!.stopListening(); // 흔들기 감지 중지
+    super.dispose();
+  }
+
+  ShakeDetector? shakeDetector;
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +146,7 @@ class Middle extends StatelessWidget {
                         fontSize: 18.0,
                         color: Colors.white,
                       )),
-                  Text('94',
+                  Text('${count}',
                       style: TextStyle(
                         fontSize: 70.0,
                         color: Colors.white,
@@ -221,7 +255,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:10.0,
+                  top: 10.0,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -240,7 +274,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -277,7 +311,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:10.0,
+                  top: 10.0,
                   bottom: 10.0,
                   right: 10.0,
                 ),
@@ -295,7 +329,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -338,7 +372,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -357,7 +391,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -394,7 +428,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                 ),
@@ -412,7 +446,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -455,7 +489,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -474,7 +508,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -511,7 +545,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                 ),
@@ -529,7 +563,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -572,7 +606,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -591,7 +625,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -628,7 +662,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                 ),
@@ -646,7 +680,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -689,7 +723,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -708,7 +742,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -745,7 +779,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                 ),
@@ -763,7 +797,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -806,7 +840,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -825,7 +859,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -862,7 +896,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                 ),
@@ -880,7 +914,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -923,7 +957,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -942,7 +976,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -979,7 +1013,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                 ),
@@ -997,7 +1031,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -1039,7 +1073,7 @@ class Bottom extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                   left: 10.0,
@@ -1058,7 +1092,7 @@ class Bottom extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top:13.0,
+                            top: 13.0,
                             left: 13.0,
                           ),
                           child: Column(
@@ -1095,7 +1129,7 @@ class Bottom extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top:2.5,
+                  top: 2.5,
                   bottom: 10.0,
                   right: 10.0,
                 ),
