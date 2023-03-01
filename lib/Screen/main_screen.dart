@@ -40,7 +40,7 @@ class Top extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(
-            left: 150.0,
+            left: 110.0,
           ),
           child: Row(
             children: const [
@@ -381,7 +381,7 @@ class Bottom extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
+                          padding: const EdgeInsets.only(right: 10.0),
                           child: Icon(Icons.run_circle_outlined,
                               size: 60.0, color: Colors.yellow[800]),
                         ),
@@ -615,7 +615,7 @@ class Bottom extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
+                          padding: const EdgeInsets.only(right: 4.0),
                           child: Icon(Icons.rule_folder,
                               size: 60.0, color: Colors.yellow[800]),
                         ),

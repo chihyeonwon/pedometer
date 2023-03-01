@@ -81,7 +81,7 @@ class Top extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 55.0),
+            padding: const EdgeInsets.only(left: 20.0),
             child: Text('최신 버전 사용 중',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
